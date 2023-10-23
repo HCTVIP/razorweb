@@ -8,7 +8,7 @@ builder.Services.AddRazorPages();
 var services = builder.Services;
 services.AddDbContext<MyBlogContext>(options =>
 {
-	options.UseSqlServer(builder.Configuration.GetConnectionString("MyBlogContext"));
+	options.UseSqlServer(builder.Configuration.GetConnectionString("MyBlogContext")); 
 });
 
 var app = builder.Build();

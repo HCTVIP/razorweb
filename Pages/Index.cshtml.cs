@@ -20,6 +20,7 @@ namespace RAZORWEB.Pages
 			var posts = (from a in myBlogContext.articles
                          orderby a.Created descending
 					   select a).ToList();
+			
 
 			ViewData["posts"] = posts;
 		}

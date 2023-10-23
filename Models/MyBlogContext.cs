@@ -4,7 +4,8 @@ namespace RAZORWEB.Models
 {
 	public class MyBlogContext : DbContext
 	{
-		public MyBlogContext(DbContextOptions<MyBlogContext> options) : base(options)
+        public DbSet<Article> articles { get; set; }
+        public MyBlogContext(DbContextOptions<MyBlogContext> options) : base(options)
 		{
 			
 		}
@@ -21,7 +22,7 @@ namespace RAZORWEB.Models
 
 
 
-		public DbSet<Article> articles {  get; set; }
+		
 		
 	}
 }
